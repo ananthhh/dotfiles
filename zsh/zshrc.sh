@@ -12,11 +12,14 @@ source ~/dotfiles/zsh/plugins/fixls.zsh
 # For vim mappings: 
     stty -ixon
 
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/history.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/key-bindings.zsh
-source ~/dotfiles/zsh/plugins/oh-my-zsh/lib/completion.zsh
+# Oh My Zsh
+export ZSH=~/dotfiles/zsh/plugins/oh-my-zsh
+plugins=(git, docker)
+source $ZSH/oh-my-zsh.sh
+
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh/plugins/vi-mode.plugin.zsh
 
 # Fix for arrow-key searching
 # start typing + [Up-Arrow] - fuzzy find history forward
