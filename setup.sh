@@ -1,3 +1,5 @@
+#!/bin/bash
+
 check_default_shell() {
     if [ -z "${SHELL##*zsh*}" ] ;then
             echo "Default shell is zsh."
@@ -28,6 +30,14 @@ echo
 
 echo "Mapping ~/.tmux.conf"
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+
+echo "Mapping ~/.gitconfig"
+(
+cat <<End-of-message
+[include]
+    path = $HOME/dotfiles/git/gitconfig
+End-of-message
+) > ~/.gitconfig
 
 echo
 echo "Please log out and log back in for default shell to be initialized."

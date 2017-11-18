@@ -1,0 +1,17 @@
+[user]
+	name = ananthhh
+	email = ananthhh@outlook.com
+[core]
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	excludesfile = ~/dotfiles/git/gitignore
+[push]
+	default = simple
+[alias]
+	c = commit
+	ca = commit --amend
+	co = checkout
+	cob = checkout -b
+	com = checkout master
+	po = push origin
+	poh = push origin HEAD

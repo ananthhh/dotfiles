@@ -1,0 +1,13 @@
+.idea/
+target/
+*.DS_Store
+*.iml
+*.war
+
+*.pyc
+*.komodoproject
+*appengine_config.pyc
+
+node_modules/
+
+*.log
