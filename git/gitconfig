@@ -15,3 +15,4 @@
 	com = checkout master
 	po = push origin
 	poh = push origin HEAD
+	pmh = push mine HEAD

@@ -32,11 +32,33 @@ echo
 check_for_software fzf
 echo
 
+check_for_software git
+echo
+
+check_for_software neovim
+echo
+
+check_for_software fpp
+echo
+
+check_for_software tig
+echo
+
+check_for_software ripgrep
+echo
+
+check_for_software wakeonlan
+echo
+
 # Vim Related softwares
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo
+
 
 # TMUX related softwares
 check_for_software reattach-to-user-namespace
 echo
 
+# TMUX Plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo
