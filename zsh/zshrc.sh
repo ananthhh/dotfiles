@@ -7,6 +7,12 @@
 # Settings
     export VISUAL=vim
 
+# Aliases
+    alias vi='nvim'
+    alias cp='cp -r'
+    alias p='pbpaste'
+    alias c='pbcopy'
+
 source ~/dotfiles/zsh/plugins/fixls.zsh
 
 # For vim mappings: 
