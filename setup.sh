@@ -39,5 +39,8 @@ cat <<End-of-message
 End-of-message
 ) > ~/.gitconfig
 
+echo "Mapping ~/.ideavimrc"
+printf "source $HOME/dotfiles/vim/ideavimrc" > ~/.ideavimrc
+
 echo
 echo "Please log out and log back in for default shell to be initialized."
