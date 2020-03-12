@@ -22,6 +22,9 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Easy Motion - asesomeness
+set easymotion
+
 """ LEADER
 " Reload .ideavimrc
 nnoremap <leader>`    :source ~/.ideavimrc<CR>
