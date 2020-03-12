@@ -7,6 +7,13 @@
 # Settings
     export VISUAL=vim
 
+# Aliases
+    alias vi='nvim'
+    alias cp='cp -r'
+    alias p='pbpaste'
+    alias c='pbcopy'
+    alias wstorm='/usr/local/bin/webstorm'
+
 source ~/dotfiles/zsh/plugins/fixls.zsh
 
 # Fix vim warnings
