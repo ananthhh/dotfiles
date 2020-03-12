@@ -31,6 +31,9 @@ echo
 echo "Mapping ~/.tmux.conf"
 printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
 
+echo "Mapping ~/.spacemacs"
+cp ./spacemacs.el ~/.spacemacs
+
 echo "Mapping ~/.gitconfig"
 (
 cat <<End-of-message
