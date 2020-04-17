@@ -86,3 +86,7 @@ vnoremap <leader>wV    <Esc>:action SplitVertically<CR>:action VimWindowRight<CR
 " Focus next window
 nnoremap <leader>ww    :action VimWindowNext<CR>
 vnoremap <leader>ww    <Esc>:action VimWindowNext<CR>
+
+" Open terminal
+nnoremap gt    :action ActivateTerminalToolWindow<CR>
+vnoremap gt    :action ActivateTerminalToolWindow<CR>
