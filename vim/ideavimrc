@@ -1,15 +1,21 @@
+let mapleader = " "
+
 """ PLUGINS
 " Emulate vim-surround, Commands: ys, cs, ds, S
 set surround
+set easymotion
+set ReplaceWithRegister
+set textobj-entire
+set argtextobj
 
 """ SETTINGS
 """ Settings to behave as similar as possible to spacemacs defaults
 
-let mapleader = " "
+map <Leader> <Plug>(easymotion-prefix)
 
 " Execute an action. Like <M-x>
-nnoremap <leader><Space>    :action GotoAction<CR>
-vnoremap <leader><Space>    <Esc>:action GotoAction<CR>
+nnoremap <leader>,    :action GotoAction<CR>
+vnoremap <leader>,    <Esc>:action GotoAction<CR>
 
 " Search as characters are entered
 set incsearch
@@ -22,70 +28,26 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" Easy Motion - asesomeness
-set easymotion
-
 """ LEADER
 " Reload .ideavimrc
 nnoremap <leader>`    :source ~/.ideavimrc<CR>
 vnoremap <leader>`    <Esc>:source ~/.ideavimrc<CR>
 
+""" Diff shortcuuts
+nnoremap gn            :action NextDiff<CR>
+
 """ WINDOWS
 " Split window right
-nnoremap <leader>wv    :action SplitVertically<CR>
-vnoremap <leader>wv    <Esc>:action SplitVertically<CR>
+nnoremap <leader>;    :action SplitVertically<CR>
+vnoremap <leader>;    <Esc>:action SplitVertically<CR>
 
 " Split window below
-nnoremap <leader>ws    :action SplitHorizontally<CR>
-vnoremap <leader>ws    <Esc>:action SplitHorizontally<CR>
-
-" Close window
-nnoremap <leader>wd    :action VimWindowClose<CR>
-vnoremap <leader>wd    <esc>:action VimWindowClose<CR>
-
-" Focus window far left
-nnoremap <leader>wH    :action VimWindowLeft<CR>10@:
-vnoremap <leader>wH    <Esc>:action VimWindowLeft<CR>10@:
-
-" Focus window left
-nnoremap <leader>wh         :action VimWindowLeft<CR>
-vnoremap <leader>wh         <Esc>:action VimWindowLeft<CR>
-
-" Focus window very bottom
-nnoremap <leader>wJ    :action VimWindowDown<CR>10@:
-vnoremap <leader>wJ    <Esc>:action VimWindowDown<CR>10@:
-
-" Focus window down
-nnoremap <leader>wj         :action VimWindowDown<CR>
-vnoremap <leader>wj         <Esc>:action VimWindowDown<CR>
-
-" Focus window very top
-nnoremap <leader>wK    :action VimWindowUp<CR>10@:
-vnoremap <leader>wK    <Esc>:action VimWindowUp<CR>10@:
-
-" Focus window up
-nnoremap <leader>wk       :action VimWindowUp<CR>
-vnoremap <leader>wk       <Esc>:action VimWindowUp<CR>
-
-" Focus window far right
-nnoremap <leader>wL    :action VimWindowRight<CR>10@:
-vnoremap <leader>wL    <Esc>:action VimWindowRight<CR>10@:
-
-" Focus window right
-nnoremap <leader>wl          :action VimWindowRight<CR>
-vnoremap <leader>wl          <Esc>:action VimWindowRight<CR>
-
-" Split window below and focus
-nnoremap <leader>wS    :action SplitHorizontally<CR>:action VimWindowDown<CR>
-vnoremap <leader>wS    <Esc>:action SplitHorizontally<CR>:action VimWindowDown<CR>
-
-" Split window right and focus
-nnoremap <leader>wV    :action SplitVertically<CR>:action VimWindowRight<CR>
-vnoremap <leader>wV    <Esc>:action SplitVertically<CR>:action VimWindowRight<CR>
+nnoremap <leader>'    :action SplitHorizontally<CR>
+vnoremap <leader>'    <Esc>:action SplitHorizontally<CR>
 
 " Focus next window
-nnoremap <leader>ww    :action VimWindowNext<CR>
-vnoremap <leader>ww    <Esc>:action VimWindowNext<CR>
+nnoremap <leader>n    <C-w>w
+vnoremap <leader>n    <Esc> <C-w>w
 
 " Open terminal
 nnoremap gt    :action ActivateTerminalToolWindow<CR>
